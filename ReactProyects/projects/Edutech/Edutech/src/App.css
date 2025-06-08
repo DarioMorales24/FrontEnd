@@ -1,0 +1,13 @@
+:root {
+  --verde: #82c7a5;
+  --azul: #0145ac;
+  --negro: #1b212c;
+  --grisOscuro: #222833;
+  --grisClaro: #292f39;
+  --blanco: #dddddd;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
