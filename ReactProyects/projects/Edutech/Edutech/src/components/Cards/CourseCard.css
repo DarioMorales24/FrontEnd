@@ -1,0 +1,16 @@
+.course-card {
+    width: 300px;
+    height: 200px;
+    background-color: #777;
+    border-radius: 15px;
+}
+
+.course-card img {
+    width: 300px;
+    height: 100px;
+    border-radius: 15px 15px 0 0;
+    object-fit: cover;
+    margin: 0 auto;
+    display: block;
+    background-color: #aaaaaa;
+}

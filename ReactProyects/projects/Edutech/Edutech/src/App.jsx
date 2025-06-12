@@ -1,13 +1,14 @@
 import { useState } from 'react'
 import './App.css'
-import {LoginPage} from "./pages/LoginPage/LoginPage.jsx";
-
+import { LoginPage } from "./pages/LoginPage/LoginPage.jsx";
+import { CoursesPage } from './pages/CoursesPage/CoursesPage.jsx'
 './pages'
 
-function App() {
+export const App = () => {
     return (
         <div className="App">
-            <LoginPage />
+            {/*<LoginPage/>*/}
+            <CoursesPage/>
         </div>
     )
 }
