@@ -23,18 +23,23 @@
 .content h1 {
     color: var(--blanco);
     font-size: 40px;
-    margin: 20px;
 }
 
 .cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 10px;
-    width: 80vw;
-    padding: 20px;
+    width: 100%;
+    max-width: 88vw;
+    padding: 50px;
+    margin: 0 auto;
 }
 
-
+@media (min-width: 1024px) {
+    .cards {
+        grid-template-columns: repeat(4, 1fr); /* Máximo 4 columnas */
+    }
+}
 
 .container::-webkit-scrollbar {
     display: none; /* Oculta la barra de desplazamiento */
