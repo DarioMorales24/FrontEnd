@@ -1,4 +1,4 @@
-import "./CourseCard.css"
+import "./CourseCardStyles.css"
 
 export const CourseCard = ({ imageLink, courseTitle, courseDescription, coursePrice }) => {
     return (

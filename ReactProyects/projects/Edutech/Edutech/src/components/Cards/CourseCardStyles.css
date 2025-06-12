@@ -1,0 +1,31 @@
+.course-card {
+    max-width: 250px;
+    min-width: 200px;
+    height: 180px;
+    background-color: var(--negro);
+    color: var(--blanco);
+    outline: 1px solid var(--blanco);
+}
+
+.course-card img {
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+    margin: 0 auto;
+    display: block;
+    box-sizing: border-box;
+    outline: none;
+}
+
+.course-details {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.course-details p {
+    font-size: 14px;
+    margin: 5px 0;
+}
+

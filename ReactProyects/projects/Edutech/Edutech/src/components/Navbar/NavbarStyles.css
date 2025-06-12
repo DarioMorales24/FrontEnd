@@ -1,9 +1,12 @@
 .navbar {
     width: 100vw;
     height: 100px;
-    background-color: #fff;
+    background-color: var(--negro);
     color: white;
-    padding: 0 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
 }
 
 .navbar-container {
@@ -13,15 +16,21 @@
     align-items: center;
 }
 
+.logo-container {
+    margin: 0;
+}
+
 .logo-container img {
-    height: 80px;
-    width: 200px;
+    width: 250px;
+    height: 100px;
     object-fit: cover;
+    margin: 0;
 }
 
 .nav-links {
     display: flex;
     gap: 10px;
+    margin-right: 20px;
 }
 
 .nav-links li {
@@ -31,14 +40,16 @@
 
 .nav-links li a {
     text-decoration: none;
-    color: var(--grisClaro);
+    color: var(--blanco);
     cursor: pointer;
     padding: 5px;
-    border-radius: 5px;
+    border: 1px solid transparent;
+    outline: none;
+    transition: border-color 0.1s ease;
+    box-sizing: border-box;
 }
 
 .nav-links li a:hover {
-    border: 1px solid var(--grisClaro);
-    box-shadow: 3px 3px #444444;
-    transition: border .6s ease;
+    border-color: var(--blanco);
+    transition: border-color 0.6s ease;
 }

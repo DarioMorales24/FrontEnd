@@ -1,4 +1,5 @@
 import './NavbarStyles.css'
+import logo from '../../assets/logo/logo-lado.webp'
 
 export const Navbar = () => {
     return (
@@ -6,7 +7,7 @@ export const Navbar = () => {
             <div className="navbar-container">
                 <div className="logo-container">
                     <img
-                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2Kmux0hne-wbZcnXICDfQ8xTLXRUWuyoraw&s"
+                        src={logo}
                         alt="logo"
                     />
                 </div>
