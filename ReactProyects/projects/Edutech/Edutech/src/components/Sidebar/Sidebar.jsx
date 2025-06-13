@@ -8,7 +8,7 @@ export const Sidebar = () => {
                     <button className={'btn'}>Dashboard</button>
                 </li>
                 <li>
-                    <button className={'btn'}>Cursos</button>
+                    <button className={'btn'} itemID={'courseBtn'}>Cursos</button>
                 </li>
                 <li>
                     <button className={'btn'}>Inscripciones</button>

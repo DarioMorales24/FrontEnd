@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
 
+/* Resetear márgenes y paddings para todos los elementos */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -7,6 +8,7 @@
     font-family: "Roboto Condensed", sans-serif;
 }
 
+/* Estilos para la página de login */
 .login-page {
     display: flex;
     align-items: center;
@@ -14,57 +16,66 @@
     width: 100vw;
     height: 100vh;
     background-color: var(--negro);
-    box-sizing: border-box;
+    padding: 10px;
 }
 
+/* Estilos para el contenedor del formulario de login */
 .login-container {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(60deg,var(--azul), var(--verde));
+    margin: 2vw;
+    background: linear-gradient(60deg, var(--azul), var(--verde));
     width: 70vw;
     min-width: 400px;
     height: 90vh;
 }
 
+/* Contenedor del logo */
 .logo-container {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 2em;
+    margin-bottom: 1em;
 }
 
-.logo-container img {
-    height: 100px;
+/* Estilo para la imagen del logo */
+.logo-container .logo {
     width: 200px;
+    height: 120px;
     object-fit: cover;
 }
 
+/* Estilos para el contenedor del formulario */
 .form-container {
     display: flex;
     align-items: center;
     flex-direction: column;
     padding: 2em;
-    background-color: #fff;
+    background-color: var(--blanco);
     width: 400px;
     height: 80vh;
     border-radius: 10px;
 }
 
+/* Título del formulario */
 .login-title {
     font-size: 2rem;
     font-weight: bold;
     margin-bottom: 2rem;
-    color: #555555;
+    color: var(--grisOscuro);
     padding: 0.8em;
 }
 
+/* Estilos para el formulario */
 .login-form {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
 }
+
+/* Estilos para los inputs del formulario */
 .label-input {
     display: flex;
     flex-direction: column;
@@ -75,21 +86,22 @@
 }
 
 .label-input label {
-    display: flex;
-    width: 100px;
-    color: #555555;;
     font-size: 12px;
     font-weight: 600;
+    color: var(--grisOscuro);
 }
 
+/* Estilos de los inputs */
 .label-input input {
     padding: 0.5rem;
     border: none;
     border-bottom: 1px solid #aaaaaa;
     color: var(--grisOscuro);
-    width: 300px;
+    width: 100%;
+    font-size: 14px;
 }
 
+/* Estilos para los enlaces en la parte inferior */
 .links {
     width: 300px;
     display: flex;
@@ -97,7 +109,7 @@
 }
 
 .links a {
-    color: #555555;
+    color: var(--grisOscuro);
     text-decoration: none;
     font-size: 12px;
     font-weight: 600;
@@ -105,16 +117,26 @@
     cursor: pointer;
 }
 
+/* Estilo para el botón de submit */
 .btn-submit {
     margin: 2em 0;
     width: 300px;
-    height: 30px;
-    color: white;
-    font-size: 20px;
-    border-radius: 1000px;
+    height: 40px;
+    color: var(--blanco);
+    font-size: 18px;
+    border-radius: 25px;
     border: 1px solid transparent;
-    background: linear-gradient(60deg,var(--azul), var(--verde));
+    background: linear-gradient(60deg, var(--azul), var(--verde));
+    cursor: pointer;
 }
 
+.btn-submit:hover {
+    background: linear-gradient(60deg, var(--verde), var(--azul)); /* Cambiar la dirección del gradiente */
+}
 
-
+/* Estilos para el mensaje de error */
+.error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: 10px;
+}

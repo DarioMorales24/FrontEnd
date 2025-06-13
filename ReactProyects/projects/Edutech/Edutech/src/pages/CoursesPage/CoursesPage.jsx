@@ -1,4 +1,5 @@
 import "./CoursesPageStyles.css"
+import React from "react";
 import { CourseCard } from "../../components/Cards/CourseCard.jsx";
 import { Navbar } from "../../components/Navbar/Navbar.jsx";
 import {Sidebar} from "../../components/Sidebar/Sidebar.jsx";
@@ -23,29 +24,23 @@ export const CoursesPage = () => {
 
     return (
         <div className={'page-container'}>
+            <section className='course-content'>
+                <h1>CURSOS</h1>
+                <div className={'cards'}>
+                    {courses.map((course, index) => (
+                        <CourseCard
+                            key={index}
+                            imageLink={link}
+                            courseTitle={course.title}
+                            courseDescription={course.description}
+                            coursePrice={course.price}
+                        />
+                        )
 
-            <Navbar/>
-            <div className={'container'}>
-                <Sidebar/>
-                <section className='content'>
-                    <h1>CURSOS</h1>
-                    <div className={'cards'}>
-                        {courses.map((course, index) => (
-                            <CourseCard
-                                key={index}
-                                imageLink={link}
-                                courseTitle={course.title}
-                                courseDescription={course.description}
-                                coursePrice={course.price}
-                            />
-                            )
+                    )}
+                </div>
 
-                        )}
-                    </div>
-
-                </section>
-            </div>
-
+            </section>
         </div>
 
 

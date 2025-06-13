@@ -10,5 +10,24 @@
   align-items: center;
   justify-content: center;
   background-color: var(--grisOscuro);
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.app-container {
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+}
+
+.content {
+  width: 100vw;
+  height: 100vh;
+  padding: 105px 0 0 130px;
+}
+
+.content.no-padding {
+  padding: 0;
 }
 
