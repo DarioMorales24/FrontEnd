@@ -1,9 +1,9 @@
 import "./CourseCardStyles.css"
 
-export const CourseCard = ({ imageLink, courseTitle, courseDescription, coursePrice }) => {
+export const CourseCard = ({ imageName, courseTitle, courseDescription, coursePrice }) => {
     return (
         <div className="course-card">
-            <img src={imageLink} alt={courseTitle} className="course-image" />
+            <img src={`/images/img-courses/${imageName}`} alt={courseTitle} className="course-image" />
             <div className="course-details">
                 <h2 className="course-title">{courseTitle}</h2>
                 <p className="course-description">

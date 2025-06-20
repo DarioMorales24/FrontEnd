@@ -1,10 +1,11 @@
 .course-card {
-    max-width: 250px;
+    max-width: 300px;
     min-width: 200px;
     height: 180px;
     background-color: var(--negro);
     color: var(--blanco);
     outline: 1px solid var(--blanco);
+    transition: box-shadow 0.5s ease;
 }
 
 .course-card img {
@@ -27,5 +28,10 @@
 .course-details p {
     font-size: 14px;
     margin: 5px 0;
+}
+
+.course-card:hover {
+    box-shadow: 0 0 10px 2px var(--blanco);
+    transition: box-shadow 0.5s ease;
 }
 
