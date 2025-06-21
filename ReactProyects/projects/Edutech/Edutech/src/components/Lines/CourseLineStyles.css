@@ -1,0 +1,48 @@
+.fondo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.courses-lines {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 80%;
+    background-color: var(--blanco);
+    padding: 10px;
+    border-radius: 50px;
+    align-items: center;
+ }
+
+.courses-lines p {
+    width: 60%;
+}
+
+.courses-lines h1 {
+    margin: 5px 10px;
+    font-size: 25px;
+    width: 150px;
+}
+
+.courses-lines strong {
+    margin: 0 10px;
+}
+
+.btn_line {
+    border: none;
+    width: 100px;
+    background-color: var(--verde);
+    color: var(--negro);
+    font-size: 15px;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 50px;
+    margin: 0 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn_line:hover {
+    background-color: var(--grisOscuro);
+    color: var(--blanco);
+}

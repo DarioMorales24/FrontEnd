@@ -1,31 +1,71 @@
 import './SidebarStyles.css'
+import {NavLink, useNavigate} from "react-router-dom";
 
 export const Sidebar = () => {
+    const navigate = useNavigate();
+
+    const handleLogout = () => {
+        localStorage.removeItem('token');
+        navigate("/");
+    }
+
+
     return (
         <div className={'bar'}>
             <ul className={'btns-upper'}>
                 <li>
-                    <button className={'btn'}>Dashboard</button>
+                    <NavLink
+                        to="/dashboard"
+                        className={({ isActive }) => isActive ? 'btn active' : 'btn'}
+                    >
+                        Dashboard
+                    </NavLink>
                 </li>
                 <li>
-                    <button className={'btn'} itemID={'courseBtn'}>Cursos</button>
+                    <NavLink
+                        to="/courses"
+                        className={({ isActive }) => isActive ? 'btn active' : 'btn'}
+                    >
+                        Cursos
+                    </NavLink>
                 </li>
                 <li>
-                    <button className={'btn'}>Inscripciones</button>
+                    <NavLink
+                        to="/enrollment"
+                        className={({ isActive }) => isActive ? 'btn active' : 'btn'}
+                    >
+                        Inscripciones
+                    </NavLink>
                 </li>
                 <li>
-                    <button className={'btn'}>Pagos</button>
+                    <NavLink
+                        to="/payments"
+                        className={({ isActive }) => isActive ? 'btn active' : 'btn'}
+                    >
+                        Pagos
+                    </NavLink>
                 </li>
             </ul>
-            <ul className={'btns-bottom'}>
+
+            <ul className="btns-bottom">
                 <li>
-                    <button className={'btn'}>Support</button>
+                    <NavLink
+                        to="/support"
+                        className={({ isActive }) => isActive ? 'btn active' : 'btn'}
+                    >
+                        Support
+                    </NavLink>
                 </li>
                 <li>
-                    <button className={'btn'}>Setting</button>
+                    <NavLink
+                        to="/settings"
+                        className={({ isActive }) => isActive ? 'btn active' : 'btn'}
+                    >
+                        Setting
+                    </NavLink>
                 </li>
                 <li>
-                    <button className={'btn'}>Cerrar Sesion</button>
+                    <button className={'btn'} onClick={handleLogout}>Cerrar Sesion</button>
                 </li>
             </ul>
         </div>

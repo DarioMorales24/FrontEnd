@@ -2,14 +2,14 @@ import './LoginPageStyles.css';  // Asegúrate de tener este archivo para los es
 import { useState } from 'react';
 import React from 'react';
 import logo from '../../assets/logo/logo-abajo-negro.webp'
-import { useNavigate } from 'react-router-dom';  // Importa useNavigate para redirigir después del login
+import { useNavigate } from 'react-router-dom';
 
 export const LoginPage = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    const [error, setError] = useState(''); // Estado para mostrar errores
+    const [error, setError] = useState('');
 
-    const navigate = useNavigate(); // Hook de React Router para redirección
+    const navigate = useNavigate(); //
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -37,10 +37,10 @@ export const LoginPage = () => {
             console.log('Login successful:', data);
 
             // Guardar token si es necesario
-            // localStorage.setItem("token", data.token);  // Si necesitas guardar el token
+            localStorage.setItem("token", data.token);
 
             // Redirigir al usuario a la página de inicio (puedes cambiar la ruta)
-            navigate('/home'); // Redirige a la página de inicio o la página que necesites
+            navigate('/dashboard');
 
         } catch (error) {
             setError('Error durante el login: ' + error.message); // Mostrar el error al usuario
@@ -65,12 +65,13 @@ export const LoginPage = () => {
 
                     <form className="login-form" onSubmit={handleSubmit}>
                         <div className="label-input">
-                            <label htmlFor="username">Username</label>
+                            <label htmlFor="email">Email</label>
                             <input
-                                type="text"
-                                id="username"
-                                name="username"
+                                type="email"
+                                id="email"
+                                name="email"
                                 value={email}
+                                required
                                 onChange={(e) => setEmail(e.target.value)}
                             />
                         </div>

@@ -1,5 +1,6 @@
 import './DashboardPageStyles.css'
 import {CourseCard} from "../../components/Cards/CourseCard.jsx";
+import {CourseLine} from "../../components/Lines/CourseLine.jsx";
 
 export const DashboardPage = () => {
     const courses = [
@@ -63,14 +64,13 @@ export const DashboardPage = () => {
         <div className="dashboard-page">
             <div className={'courses-section'}>
                 <h1 className="dashboard-title">Cursos Disponibles</h1>
-                <div className="courses-grid">
+                <div className="courses-list">
                     {courses.map((course, index) => (
-                        <CourseCard
+                        <CourseLine
                             key={index}
-                            imageName={course.imageName}
                             courseTitle={course.title}
                             courseDescription={course.description}
-                            coursePrice={course.price}
+                            coursePrice={'$'+ course.price}
                         />
                     ))}
                 </div>
