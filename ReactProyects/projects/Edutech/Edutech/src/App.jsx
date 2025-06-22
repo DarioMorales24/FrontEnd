@@ -4,11 +4,11 @@ import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-route
 import './App.css'
 import { LoginPage } from "./pages/LoginPage/LoginPage.jsx";
 import { CoursesPage } from './pages/CoursesPage/CoursesPage.jsx'
-import { PruebasPage } from './pages/PruebasPage.jsx'
 import { Navbar } from "./components/Navbar/Navbar.jsx";
 import { Sidebar } from "./components/Sidebar/Sidebar.jsx";
 import {DashboardPage} from "./pages/DashboardPage/DashboardPage.jsx";
 import {PrivateRoute} from "./components/PrivateRoute.jsx";
+import { CoursePage } from "./pages/CoursePage/CoursePage.jsx";
 
 export const App = () => {
     const location = useLocation();
@@ -28,7 +28,7 @@ export const App = () => {
                     <Route path="/courses" element={<CoursesPage />} />
                     <Route path="/dashboard"
                            element={<PrivateRoute><DashboardPage /></PrivateRoute>} />
-                    <Route path="/pruebas" element={<PruebasPage/>} />
+                    <Route path="/pruebas" element={<CoursePage/>} />
                 </Routes>
             </div>
         </div>
